@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Calculadora de Gastos</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <h1>💰 Calculadora de Gastos</h1>
+    
+    <div class="input-group">
+      <input type="text" id="descInput" placeholder="Descrição do gasto">
+      <input type="number" id="valorInput" placeholder="Valor (R$)">
+      <button id="addBtn">Adicionar</button>
+    </div>
+    
+    <ul id="listaGastos"></ul>
+    
+    <h2>Total: R$ <span id="total">0.00</span></h2>
+    <button id="clearBtn" class="clear">Limpar Tudo</button>
+  </div>
+  
+  <script src="script.js"></script>
+</body>
+</html>
