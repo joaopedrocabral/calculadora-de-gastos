@@ -25,7 +25,11 @@ function botaoAdicionar(){
         limparCampo('descInput');
         limparCampo('valorInput');
     } else {
+<<<<<<< HEAD
         listaGastos.push(descricao);
+=======
+        listaGastos.push({descricao: item, valor: valor});
+>>>>>>> b7f27b302051926aa60898e04b0d502d514b68a0
         alterarMensagem('h3', 'Gasto adicionado com sucesso!');
         limparCampo('descInput');
         limparCampo('valorInput');
@@ -39,8 +43,12 @@ function exibirGastosNaTela(){
 
     for (let i = 0; i < listaGastos.length; i++) {
         let novoGasto = document.createElement('li');
-        novoGasto.textContent = listaGastos[i];
+        novoGasto.textContent = `${listaGastos[i].descricao} - R$ ${listaGastos[i].valor}`
         lista.appendChild(novoGasto);
     }
-
+console.log(listaGastos)
+let total = listaGastos.reduce(function(acumulador, valorAtual) {
+    return acumulador + valorAtual
+}, 0);
+document.getElementById('total').innerText(total)
 }
