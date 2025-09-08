@@ -1,3 +1,5 @@
+let limiteDeGastos = document.getElementById('limiteDeGastos').value;
+
 function alterarMensagem (id, novaMensagem){
     const elemento = document.getElementById(id);
     if (!elemento) {
@@ -25,16 +27,20 @@ function botaoAdicionar(){
         limparCampo('descInput');
         limparCampo('valorInput');
     } else {
-<<<<<<< HEAD
-        listaGastos.push(descricao);
-=======
-        listaGastos.push({descricao: item, valor: valor});
->>>>>>> b7f27b302051926aa60898e04b0d502d514b68a0
+        listaGastos.push({descricao: item, valor: Number(valor)});
         alterarMensagem('h3', 'Gasto adicionado com sucesso!');
         limparCampo('descInput');
         limparCampo('valorInput');
         exibirGastosNaTela();
     }
+}
+
+function somarTotal(){
+    const total = document.getElementById('total');
+    const somaValores = listaGastos.reduce((soma, gasto) => soma + gasto.valor, 0)
+    const saldoDisponivel = document.getElementById('saldoDisponivel');
+    total.innerText = somaValores.toFixed(2);
+    saldoDisponivel.innerText = limiteDeGastos - somaValores;
 }
 
 function exibirGastosNaTela(){
@@ -43,12 +49,8 @@ function exibirGastosNaTela(){
 
     for (let i = 0; i < listaGastos.length; i++) {
         let novoGasto = document.createElement('li');
-        novoGasto.textContent = `${listaGastos[i].descricao} - R$ ${listaGastos[i].valor}`
+        novoGasto.textContent = `${listaGastos[i].descricao} - R$ ${listaGastos[i].valor.toFixed(2)}`
         lista.appendChild(novoGasto);
     }
-console.log(listaGastos)
-let total = listaGastos.reduce(function(acumulador, valorAtual) {
-    return acumulador + valorAtual
-}, 0);
-document.getElementById('total').innerText(total)
-}
+    somarTotal();
+}   

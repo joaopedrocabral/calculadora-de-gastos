@@ -12,6 +12,7 @@
     <h3 id="h3">Digite um gasto para adicionar!</h3>
     
     <div class="input-group">
+      <input type="number" id="limiteDeGastos"  placeholder="Limite de Gastos">
       <input type="text" id="descInput" placeholder="Descrição do gasto">
       <input type="number" id="valorInput" placeholder="Valor (R$)">
       <button onclick="botaoAdicionar()" id="addBtn">Adicionar</button>
@@ -20,9 +21,10 @@
     <ul id="listaGastos"></ul>
     
     <h2 id="h2">Total: R$ <span id="total">0.00</span></h2>
+    <h3 id="limiteDeGastos">Saldo Disponível: R$ <span id="saldoDisponivel">0.00</span></h3>
     <button onclick="botaoLimpar()" id="clearBtn" class="clear">Limpar Tudo</button>
   </div>
   
   <script src="script.js"></script>
 </body>
-</html>
+</html> 
