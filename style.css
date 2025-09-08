@@ -1,6 +1,6 @@
 body {
   font-family: Arial, sans-serif;
-  background: #f0f2f5;
+  background: #7091c2;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -8,11 +8,11 @@ body {
 }
 
 .container {
-  background: #fff;
+  background: rgb(227, 214, 191);
   padding: 20px;
   border-radius: 12px;
-  box-shadow: 0 4px 8px rgba(0,0,0,0.15);
-  width: 350px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+  width: px;
   text-align: center;
 }
 
@@ -23,7 +23,7 @@ body {
 }
 
 input {
-  padding: 8px;
+  padding: 5px;
   border: 1px solid #ccc;
   border-radius: 6px;
   flex: 1;
