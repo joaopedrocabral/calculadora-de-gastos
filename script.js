@@ -25,7 +25,7 @@ function botaoAdicionar(){
         limparCampo('descInput');
         limparCampo('valorInput');
     } else {
-        listaGastos.push({descricao : item});
+        listaGastos.push(descricao);
         alterarMensagem('h3', 'Gasto adicionado com sucesso!');
         limparCampo('descInput');
         limparCampo('valorInput');
