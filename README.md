@@ -7,9 +7,9 @@
 
 ## 🖼️ Imagem
 
-```markdown
-![Screenshot do projeto](./assets/screenshot.png)
-```
+
+![Screenshot do projeto](./screenshot.png)
+
 
 ---
 
@@ -57,4 +57,4 @@
 **João** — desenvolvedor iniciante / estudante do programa *Oracle Next Education (ONE)*.  
 Projeto pessoal criado para praticar JavaScript, DOM e conceitos básicos de front-end.  
 
-- LinkedIn: `https://www.linkedin.com/in/seu-linkedin` *(substitua)*
+- LinkedIn: `https://www.linkedin.com/in/joaopedro-cabral/`
